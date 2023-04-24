@@ -6,8 +6,6 @@ services:
     restart: always
     environment:
       MYSQL_DATABASE: kawa_db
-      MYSQL_USER: kawa
-      MYSQL_PASSWORD: 3ea6f5ac9a0ce718b5bd809b0b5d9c750fbf7313ce785075a8ee3159ddd17f7c
     command: ['--init-file', '/etc/mysql/init.sql']
     volumes:
       - db_data:/var/lib/mysql
