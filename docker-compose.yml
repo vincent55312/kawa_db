@@ -9,7 +9,7 @@ services:
     command: ['--init-file', '/etc/mysql/init.sql']
     volumes:
       - db_data:/var/lib/mysql
-      - ./init.sql:/etc/mysql/init.sql
+      - ./init.sql:/etc/mysql/init.sql:ro
     ports:
       - "3306:3306"
 
