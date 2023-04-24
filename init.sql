@@ -1,2 +1,3 @@
 GRANT ALL PRIVILEGES ON kawa_db.* TO 'kawa'@'%';
+GRANT CREATE DATABASE ON *.* TO 'kawa'@'%';
 FLUSH PRIVILEGES;
