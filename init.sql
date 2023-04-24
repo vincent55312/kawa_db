@@ -1,0 +1,2 @@
+GRANT ALL PRIVILEGES ON kawa_db.* TO 'kawa'@'%';
+FLUSH PRIVILEGES;
