@@ -5,10 +5,10 @@ services:
     image: mariadb
     restart: always
     environment:
-      - MARIADB_ROOT_PASSWORD=${MARIADB_ROOT_PASSWORD}
-      - MARIADB_DATABASE=${MARIADB_DATABASE}
-      - MARIADB_USER=${MARIADB_USER}
-      - MARIADB_PASSWORD=${MARIADB_PASSWORD}
+      - MARIADB_ROOT_PASSWORD=Kz1NnwUZZpuqEGDf64WpdaN7824ngiV1PTpYcVF2Ugwtg8EZcpqt
+      - MARIADB_DATABASE=kawa_db
+      - MARIADB_USER=kawa
+      - MARIADB_PASSWORD=Kz1NnwUZZpuqEGDf64WpdaN7824ngiV1PTpYcVF2Ugwtg8EZcpqt
     command: ['--init-file', '/etc/mysql/init.sql']
     volumes:
       - kawa_db:/var/lib/mysql
