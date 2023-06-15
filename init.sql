@@ -1,3 +1,3 @@
-GRANT ALL PRIVILEGES ON kawa_db.* TO 'root'@'%';
-GRANT CREATE DATABASE ON *.* TO 'root'@'%';
+GRANT ALL PRIVILEGES ON kawa_db.* TO 'kawa'@'%';
+GRANT CREATE DATABASE ON *.* TO 'kawa'@'%';
 FLUSH PRIVILEGES;
