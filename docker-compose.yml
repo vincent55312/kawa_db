@@ -1,17 +1,20 @@
 version: "3"
 
 services:
-  db:
+  mariadb:
     image: mariadb
     restart: always
     environment:
-      MYSQL_DATABASE: kawa_db
+      - MARIADB_ROOT_PASSWORD=${MARIADB_ROOT_PASSWORD}
+      - MARIADB_DATABASE=${MARIADB_DATABASE}
+      - MARIADB_USER=${MARIADB_USER}
+      - MARIADB_PASSWORD=${MARIADB_PASSWORD}
     command: ['--init-file', '/etc/mysql/init.sql']
     volumes:
-      - db_data:/var/lib/mysql
+      - kawa_db:/var/lib/mysql
       - ./init.sql:/etc/mysql/init.sql:ro
     ports:
       - "3306:3306"
 
 volumes:
-  db_data:
+  kawa_db:
